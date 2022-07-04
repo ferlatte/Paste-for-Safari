@@ -1,0 +1,4 @@
+#! /bin/sh
+
+pushd test
+exec python3 -m http.server

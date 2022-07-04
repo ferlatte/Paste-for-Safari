@@ -1,7 +1,10 @@
-browser.runtime.sendMessage({ greeting: "hello" }).then((response) => {
-    console.log("Received response: ", response);
-});
+const browserDefault = function(e) {
+    e.stopImmediatePropagation();
+    return true;
+}
 
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log("Received request: ", request);
-});
+document.addEventListener("copy", browserDefault, true);
+document.addEventListener("cut", browserDefault, true);
+document.addEventListener("paste", browserDefault, true);
+
+console.log("Paste enabled.");
