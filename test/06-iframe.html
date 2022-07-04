@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Test 06 iframe</title>
+    <script src="06.js"></script>
+  </head>
+  <body>
+    <p>This page disables paste via direct, listener, properties and is inside of an iframe.</p>
+    <form>
+      <input id="attribute" type="text" oncopy="return false;" oncut="return false;" onpaste="return false;">
+      <input id="listener" type="text">
+      <input id="property" type="text">
+    </form>
+  </body>
+</html>
